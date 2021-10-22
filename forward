@@ -1,0 +1,88 @@
+#include<Servo.h>
+Servo rightLegF, rightLegB, leftLegF, leftLegB, rightFootF, rightFootB, leftFootF, leftFootB;
+int pos = 0;
+void setup() {
+  rightLegF.attach(2);
+  rightLegB.attach(3);
+  leftLegF.attach(4);
+  leftLegB.attach(5);
+  rightFootF.attach(6);
+  rightFootB.attach(7);
+  leftFootF.attach(8);
+  leftFootB.attach(9
+  );
+  rightLegF.write(90);
+  rightLegB.write(90);
+  leftLegF.write(90);
+  leftLegB.write(90);
+  rightFootF.write(90);
+  rightFootB.write(90);
+  leftFootF.write(90);
+  leftFootB.write(90);
+  // put your setup code here, to run once:
+
+}
+
+void loop() {
+   for (pos = 0; pos <= 120; pos += 1) {
+    rightLegF.write(pos);
+    delay(15);
+   }
+    rightFootF.write(60);
+   rightLegB.write(70);
+  leftLegF.write(90);
+  leftLegB.write(110);
+  rightFootB.write(70);
+  leftFootF.write(90);
+  leftFootB.write(90);
+  delay(1000);
+   for (pos = 110; pos >= 80; pos -= 1) {
+     leftLegB.write(pos);
+     delay(15);
+   }
+    rightLegF.write(120);
+    leftFootB.write(60);
+  rightLegB.write(70);
+  leftLegF.write(90);
+  rightFootF.write(90);
+  rightFootB.write(70);
+  leftFootF.write(90);
+  delay(1000);
+   for (pos = 90; pos >= 30; pos -= 1) {
+  leftLegF.write(pos);
+  delay(15);
+   }
+   rightLegF.write(120);
+  rightLegB.write(70);
+  leftLegB.write(80);
+  rightFootF.write(90);
+   leftFootF.write(120);
+  rightFootB.write(70);
+  leftFootB.write(90);
+  delay(1000);
+   for (pos = 70; pos <= 100; pos += 1) {
+  rightLegB.write(pos);
+  delay(15);
+   }
+  rightLegF.write(120);
+ rightFootB.write(100);
+  leftLegF.write(60);
+  leftLegB.write(80);
+  rightFootF.write(90);
+  leftFootF.write(90);
+  leftFootB.write(90);
+  delay(1000);
+ 
+  
+   rightLegF.write(90);
+  rightLegB.write(70);
+  rightFootF.write(90);
+  rightFootB.write(70);
+   leftLegF.write(90);
+  leftLegB.write(110);
+  leftFootF.write(90);
+  leftFootB.write(90);
+  delay(1000);
+ 
+   }
+  
